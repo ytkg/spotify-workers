@@ -1,0 +1,13 @@
+import { Hono } from 'hono'
+import { getAccessToken, getPlayingInfo } from './lib/spotify'
+
+const app = new Hono()
+
+app.get('/playing', async (c) => {
+  const accessToken = await getAccessToken(c.env.SPOTIFY_CLIENT_ID, c.env.SPOTIFY_CLIENT_SECRET, c.env.SPOTIFY_REFRESH_TOKEN)
+  const playingInfo = await getPlayingInfo(accessToken)
+
+  return c.json(playingInfo)
+})
+
+export default app
