@@ -20,7 +20,7 @@ type Album = {
   name: string
 }
 
-const getAccessToken = async (clientId: string, clientSecret: string, refreshToken: string) => {
+const createAccessToken = async (clientId: string, clientSecret: string, refreshToken: string) => {
   const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
@@ -62,4 +62,4 @@ const getPlayingInfo = async (accessToken: string) => {
   }
 }
 
-export { getAccessToken, getPlayingInfo }
+export { createAccessToken, getPlayingInfo }

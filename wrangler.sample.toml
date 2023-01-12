@@ -1,0 +1,9 @@
+name = "spotify-workers"
+main = "src/index.ts"
+compatibility_date = "2023-01-09"
+
+[[ d1_databases ]]
+binding = "DB"
+database_name = "spotify-workers-db"
+database_id = ""
+preview_database_id = ""
