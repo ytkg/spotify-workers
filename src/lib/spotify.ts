@@ -4,6 +4,7 @@ type TokenResponse = {
 
 type PlayingResponse = {
   item: Item
+  is_playing: boolean
 }
 
 type Item = {
@@ -50,12 +51,13 @@ const getPlayingInfo = async (accessToken: string) => {
     console.log(`status: ${response.status}`)
     console.log(`body: ${await response.text()}`)
 
-    return { artistName: null, albumName: null, trackName: null }
+    return { isPlaying: false, artistName: null, albumName: null, trackName: null }
   }
 
-  const { item }: PlayingResponse = await response.json()
+  const { item, is_playing: isPlaying }: PlayingResponse = await response.json()
 
   return {
+    isPlaying,
     artistName: item.artists.map((artist) => artist.name).join(', '),
     albumName: item.album.name,
     trackName: item.name,
