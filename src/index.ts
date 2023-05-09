@@ -12,6 +12,8 @@ interface Env {
 
 const app = new Hono<{ Bindings: Env }>()
 
+app.use('/', async (c) => c.redirect('https://github.com/ytkg/spotify-workers'))
+
 app.use('/playing', cache({ cacheName: 'playing', cacheControl: 'max-age=10'}))
 
 app.get('/playing', async (c) => {
