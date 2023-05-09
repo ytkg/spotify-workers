@@ -11,6 +11,7 @@ type Item = {
   artists: Artist[]
   album: Album
   name: string
+  preview_url: string
 }
 
 type Artist = {
@@ -56,7 +57,7 @@ const getPlayingInfo = async (accessToken: string) => {
     console.log(`status: ${response.status}`)
     console.log(`body: ${await response.text()}`)
 
-    return { isPlaying: false, artistName: null, albumName: null, trackName: null, imageUrl: null }
+    return { isPlaying: false, artistName: null, albumName: null, trackName: null, imageUrl: null, previewUrl: null }
   }
 
   const { item, is_playing: isPlaying }: PlayingResponse = await response.json()
@@ -66,7 +67,8 @@ const getPlayingInfo = async (accessToken: string) => {
     artistName: item.artists.map((artist) => artist.name).join(', '),
     albumName: item.album.name,
     trackName: item.name,
-    imageUrl: item.album.images[0].url
+    imageUrl: item.album.images[0].url,
+    previewUrl: item.preview_url,
   }
 }
 
