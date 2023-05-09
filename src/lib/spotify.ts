@@ -19,6 +19,11 @@ type Artist = {
 
 type Album = {
   name: string
+  images: Image[]
+}
+
+type Image = {
+  url: string
 }
 
 const createAccessToken = async (clientId: string, clientSecret: string, refreshToken: string) => {
@@ -51,7 +56,7 @@ const getPlayingInfo = async (accessToken: string) => {
     console.log(`status: ${response.status}`)
     console.log(`body: ${await response.text()}`)
 
-    return { isPlaying: false, artistName: null, albumName: null, trackName: null }
+    return { isPlaying: false, artistName: null, albumName: null, trackName: null, imageUrl: null }
   }
 
   const { item, is_playing: isPlaying }: PlayingResponse = await response.json()
@@ -61,6 +66,7 @@ const getPlayingInfo = async (accessToken: string) => {
     artistName: item.artists.map((artist) => artist.name).join(', '),
     albumName: item.album.name,
     trackName: item.name,
+    imageUrl: item.album.images[0].url
   }
 }
 
