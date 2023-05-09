@@ -60,10 +60,10 @@ const getPlayingInfo = async (accessToken: string) => {
     return { isPlaying: false, artistName: null, albumName: null, trackName: null, imageUrl: null, previewUrl: null }
   }
 
-  const { item, is_playing: isPlaying }: PlayingResponse = await response.json()
+  const { item, is_playing }: PlayingResponse = await response.json()
 
   return {
-    isPlaying,
+    isPlaying: is_playing,
     artistName: item.artists.map((artist) => artist.name).join(', '),
     albumName: item.album.name,
     trackName: item.name,
