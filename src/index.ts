@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { cache } from 'hono/cache'
+import { cors } from 'hono/cors'
 import findOrCreateAccessToken from './lib/find_or_create_access_token'
 import { getPlayingInfo } from './lib/spotify'
 
@@ -15,6 +16,7 @@ const app = new Hono<{ Bindings: Env }>()
 app.use('/', async (c) => c.redirect('https://github.com/ytkg/spotify-workers'))
 
 app.use('/playing', cache({ cacheName: 'playing', cacheControl: 'max-age=10'}))
+app.use('/playing', cors())
 
 app.get('/playing', async (c) => {
   const accessToken = await findOrCreateAccessToken(c.env.DB, c.env.SPOTIFY_CLIENT_ID, c.env.SPOTIFY_CLIENT_SECRET, c.env.SPOTIFY_REFRESH_TOKEN)
