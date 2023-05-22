@@ -13,7 +13,7 @@ interface Env {
 
 const app = new Hono<{ Bindings: Env }>()
 
-app.use('/', async (c) => c.redirect('https://github.com/ytkg/spotify-workers'))
+app.get('/', async (c) => c.redirect('https://github.com/ytkg/spotify-workers'))
 
 app.get(
   '/playing',
