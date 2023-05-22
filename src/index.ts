@@ -15,14 +15,22 @@ const app = new Hono<{ Bindings: Env }>()
 
 app.use('/', async (c) => c.redirect('https://github.com/ytkg/spotify-workers'))
 
-app.use('/playing', cache({ cacheName: 'playing', cacheControl: 'max-age=10'}))
-app.use('/playing', cors())
+app.get(
+  '/playing',
+  cache({ cacheName: 'playing', cacheControl: 'max-age=10'}),
+  cors(),
+  async (c) => {
+    const accessToken = await findOrCreateAccessToken(
+      c.env.DB,
+      c.env.SPOTIFY_CLIENT_ID,
+      c.env.SPOTIFY_CLIENT_SECRET,
+      c.env.SPOTIFY_REFRESH_TOKEN
+    )
 
-app.get('/playing', async (c) => {
-  const accessToken = await findOrCreateAccessToken(c.env.DB, c.env.SPOTIFY_CLIENT_ID, c.env.SPOTIFY_CLIENT_SECRET, c.env.SPOTIFY_REFRESH_TOKEN)
-  const playingInfo = await getPlayingInfo(accessToken)
+    const playingInfo = await getPlayingInfo(accessToken)
 
-  return c.json(playingInfo)
-})
+    return c.json(playingInfo)
+  }
+)
 
 export default app
