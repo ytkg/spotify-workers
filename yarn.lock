@@ -417,10 +417,10 @@ glob-to-regexp@^0.4.1:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-hono@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-3.2.4.tgz#b67b5a3770bf2570b30aa2b501e5eb4023225ed0"
-  integrity sha512-FAYaLxCuUO1C3YkTf4ve8wEYXXo28hGop8KD9/otYa7aeODz5kZ780apYL33OJPeMIERJzkuf59A+wNt1eA4yw==
+hono@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-3.2.5.tgz#c1c865e6306300b0ea11b1f2b4423efabb3c9fa1"
+  integrity sha512-saAKnPNGXO3vLq198IJO6ZwunQyXOYj6FkAZS08pBNKXn34lF9b7vb/pdyTrQWv3WvUPFjGCQfDyUjMhcubAMw==
 
 http-cache-semantics@^4.1.0:
   version "4.1.0"
