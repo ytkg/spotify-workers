@@ -399,10 +399,10 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-hono@^4.2.6:
-  version "4.2.6"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.2.6.tgz#064a50df90860799e86fc14f84ba994a050cf43e"
-  integrity sha512-AtbHZJYWsm+uFHLz0C6xltX7hjOV44a55gSEGBfoQOJ00KSxEUOoiIkmd+NXfapNX0j2GCKhqMmYeegBdHRwcQ==
+hono@^4.2.9:
+  version "4.2.9"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.2.9.tgz#9e81de065d18f61721aa6bfd9121dcf2af3e78d2"
+  integrity sha512-59FAv52UxDWUt/NlC0NzrRCjeVCThUnVlqlrKYm+k80XujBu6uJwBIa5gACKKZWobjA0MJ6Vds0I3URKf383Cw==
 
 inflight@^1.0.4:
   version "1.0.6"
