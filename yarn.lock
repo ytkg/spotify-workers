@@ -361,10 +361,10 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-hono@^4.3.8:
-  version "4.3.8"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.3.8.tgz#fa6fb6beb8245d2a95cbd5cce0f0a28c143967f3"
-  integrity sha512-IepU1cWz7oWY/os4Dbgq8dAjQh+APbS0LvLf85bL3cnh4sqMZ1MSBCYFkpm+MIpGoRUMmX8v9CeQh+TmBX3RUA==
+hono@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.4.0.tgz#df456c61fab856db3d546869ec8d86839ff31b54"
+  integrity sha512-Bb2GHk8jmlLIuxc3U+7UBGOoA5lByJTAFnRdH2N2fqEVy9TEQzJ9saIJUQ/ZqBvEvgEFe7UjPFNSFi8cyeU+3Q==
 
 is-binary-path@~2.1.0:
   version "2.1.0"
