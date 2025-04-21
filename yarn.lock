@@ -448,10 +448,10 @@ glob-to-regexp@0.4.1:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
 
-hono@^4.7.2:
-  version "4.7.2"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.7.2.tgz#8d8285060d318e71d75fd5c886572e021b8fcb54"
-  integrity sha512-8V5XxoOF6SI12jkHkzX/6aLBMU5GEF5g387EjVSQipS0DlxWgWGSMeEayY3CRBjtTUQYwLHx9JYouWqKzy2Vng==
+hono@^4.7.7:
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.7.7.tgz#ad01a92a2a1b03c608ef42153c85c99c05c03bfe"
+  integrity sha512-2PCpQRbN87Crty8/L/7akZN3UyZIAopSoRxCwRbJgUuV1+MHNFHzYFxZTg4v/03cXUm+jce/qa2VSBZpKBm3Qw==
 
 is-arrayish@^0.3.1:
   version "0.3.2"
