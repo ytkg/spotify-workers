@@ -12,6 +12,6 @@
     "deploy": "wrangler publish"
   },
   "dependencies": {
-    "hono": "^4.9.0"
+    "hono": "^4.9.2"
   }
 }
